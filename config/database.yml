@@ -1,0 +1,13 @@
+default: &default
+  adapter:  postgresql
+  database: medicina
+  username: postgres #medicina
+  password: postgres #medicina*&098
+
+development:
+  <<: *default
+  pool: 5
+
+production:
+  <<: *default
+  pool: 25
